@@ -1,10 +1,10 @@
+import { ADD_SERVICE_MESSAGE, DELETE_MESSAGE, UPDATE_MESSAGES } from "../actionsTypes/messages";
 import {
+    Messages,
     AddServiceMessageAction,
     DeleteMessageAction,
     UpdateMessagesAction,
-} from "../actions/messages";
-import { ADD_SERVICE_MESSAGE, DELETE_MESSAGE, UPDATE_MESSAGES } from "../actionsTypes/messages";
-import { Messages } from "../types/messages";
+} from "../types/messages";
 
 export interface MessagesState {
     list: Messages;

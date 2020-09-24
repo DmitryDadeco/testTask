@@ -1,30 +1,21 @@
 import { ADD_SERVICE_MESSAGE, DELETE_MESSAGE, UPDATE_MESSAGES } from "../actionsTypes/messages";
-import { MessageData, Messages } from "../types/messages";
-
-export interface UpdateMessagesAction {
-    type: typeof UPDATE_MESSAGES;
-    payload: Messages;
-}
+import {
+    AddServiceMessageAction,
+    DeleteMessageAction,
+    MessageData,
+    Messages,
+    UpdateMessagesAction,
+} from "../types/messages";
 
 export const updateMessages = (messages: Messages): UpdateMessagesAction => ({
     type: UPDATE_MESSAGES,
     payload: messages,
 });
 
-export interface DeleteMessageAction {
-    type: typeof DELETE_MESSAGE;
-    payload: { id: number };
-}
-
 export const deleteMessage = (id: number): DeleteMessageAction => ({
     type: DELETE_MESSAGE,
     payload: { id },
 });
-
-export interface AddServiceMessageAction {
-    type: typeof ADD_SERVICE_MESSAGE;
-    payload: { message: MessageData; index: number };
-}
 
 export const addServiceMessage = (
     message: MessageData,

@@ -1,6 +1,5 @@
-import { UpdateRateAction } from "../actions/rate";
 import { UPDATE_RATE } from "../actionsTypes/rate";
-import { Rate } from "../types/rate";
+import { Rate, UpdateRateAction } from "../types/rate";
 
 export interface RateState {
     data?: Rate;

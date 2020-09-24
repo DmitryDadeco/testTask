@@ -1,10 +1,5 @@
 import { UPDATE_RATE } from "../actionsTypes/rate";
-import { Rate } from "../types/rate";
-
-export interface UpdateRateAction {
-    type: typeof UPDATE_RATE;
-    payload: Rate;
-}
+import { Rate, UpdateRateAction } from "../types/rate";
 
 export const updateRate = (rate: Rate): UpdateRateAction => ({
     type: UPDATE_RATE,

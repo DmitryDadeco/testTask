@@ -6,7 +6,7 @@ import { getMessagesList } from "../../api/fakeApi";
 import { messagesListSelector } from "../../selectors/messages";
 import { Rate } from "../../types/rate";
 import { Item } from "./Item/Item";
-import { useList } from "./utils/useList";
+import { useMessagesList } from "../../hooks/messages";
 
 interface Props {
     rate: Rate;
@@ -15,7 +15,7 @@ interface Props {
 export const List = ({ rate }: Props): ReactElement => {
     const dispatch = useDispatch();
     const messagesList = useSelector(messagesListSelector);
-    const isLoaded = useList();
+    const isLoaded = useMessagesList();
 
     useEffect(() => {
         getMessagesList().subscribe((data) => {

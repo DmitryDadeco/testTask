@@ -1,7 +1,7 @@
 import React, { ReactElement } from "react";
 import { useSelector } from "react-redux";
 
-import { useRate } from "./utils/useRate";
+import { useRate } from "../../hooks/rate";
 import { List } from "../List/List";
 import { rateDataSelector } from "../../selectors/rate";
 

@@ -3,7 +3,7 @@ import { interval } from "rxjs";
 import { mergeMap } from "rxjs/operators";
 import { useDispatch } from "react-redux";
 
-import { updateRate } from "../../../actions/rate";
+import { updateRate } from "../actions/rate";
 
 const fetchUrl = "https://api.coindesk.com/v1/bpi/currentprice/USD.json";
 const poolingInterval = 10000;

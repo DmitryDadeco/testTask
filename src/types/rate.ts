@@ -1,3 +1,5 @@
+import { UPDATE_RATE } from "../actionsTypes/rate";
+
 export interface Rate {
     time: {
         updated: string;
@@ -13,4 +15,9 @@ export interface Rate {
             rate_float: number;
         };
     };
+}
+
+export interface UpdateRateAction {
+    type: typeof UPDATE_RATE;
+    payload: Rate;
 }
